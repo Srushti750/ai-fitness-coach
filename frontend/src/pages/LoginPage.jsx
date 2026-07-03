@@ -1,7 +1,11 @@
 import { useState } from "react";
 import { loginUser } from "../services/authServices";
+import { useContext } from "react";
+import { AuthContext } from "../contexts/AuthContext";
 
 function LoginPage() {
+
+    const { login } = useContext(AuthContext);
 
     const [formData, setFormData] = useState({
         email: "",
@@ -22,12 +26,15 @@ function LoginPage() {
 
         try {
             const response = await loginUser(formData);
+            
 
             if (response.success) {
-                localStorage.setItem(
-                    "access_token",
-                    response.access_token
-                );
+                // localStorage.setItem(
+                //     "access_token",
+                //     response.access_token
+                // );
+
+                login(response.access_token);
 
                 setMessage("Login successful");
             } else {
