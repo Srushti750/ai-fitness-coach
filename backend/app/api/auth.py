@@ -23,7 +23,9 @@ def get_user(current_user=Depends(get_current_user)):
         return {
             "message" : "Invalid token"
         }
-    user = UserRepository.get_user_by_id(current_user["sub"])
+    id = current_user["sub"]
+    print(id)
+    user = UserRepository.get_user_by_id(id)
 
     if not user:
         return {
