@@ -9,7 +9,7 @@ def success_response(message: str, data: Any=None):
         "data": data
     }
 
-def error_response(message: str):
+def error_response(message: str, data: Any=None):
     return {
         "success": False,
         "message": message,

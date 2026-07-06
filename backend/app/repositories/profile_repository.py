@@ -3,6 +3,7 @@
 from bson import ObjectId
 from app.database.connection import db
 from app.schemas.profile_schema import Gender, FitnessLevel, ActivityLevel
+from datetime import datetime, timezone
 
 class ProfileRepository:
 
@@ -23,13 +24,12 @@ class ProfileRepository:
             {"_id" : ObjectId(user_id)},
             {
                 "$set" : {
-                    "profile" : profile_data
+                    "profile" : profile_data,
+                    "updated_at" : datetime.now(timezone.utc)
                 }
             }
         )
-        print("Matched:", result.matched_count)
-        print("Modified:", result.modified_count)
-        return result.modified_count
+        return result
     
     # Return all dropdown options
     def get_profile_options():

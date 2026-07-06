@@ -17,15 +17,21 @@ class ProfileService:
         )
     
     def update_profile(user_id:str, profile_data: dict):
-        print("user_id = " , user_id)
         updated = ProfileRepository.update_profile(user_id, profile_data)
-        print("updated = " , updated)
-        if updated == 0:
+        if updated.matched_count == 0:
             return error_response(
-                "Profile could not be updated"
+                message="User not found"
                 )
+        
         updated_profile = ProfileRepository.get_profile(user_id)
         print("updated profile = ", updated_profile)
+
+        if updated.modified_count == 0:
+            return success_response(
+                message="Profile is already up to date",
+                data=updated_profile
+            )
+        
         return success_response(
             message="Profile updated successfully",
             data=updated_profile
