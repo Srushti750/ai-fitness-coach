@@ -7,17 +7,17 @@ from fastapi import Depends
 from app.core.auth import get_current_user
 from app.repositories.user_repository import UserRepository
 
-auth_api = APIRouter()
+router = APIRouter()
 
-@auth_api.post("/register")
+@router.post("/register")
 def register_user(register_data: RegisterUserSchema):
     return AuthService.register_user(register_data)
 
-@auth_api.post("/login")
+@router.post("/login")
 def login_user(login_data : LoginUserSchema):
     return AuthService.login_user(login_data)
 
-@auth_api.get("/user")
+@router.get("/user")
 def get_user(current_user=Depends(get_current_user)):
     if not current_user:
         return {

@@ -1,4 +1,4 @@
-# Includes database operations
+# Includes operations to interact with database
 
 from bson import ObjectId
 
