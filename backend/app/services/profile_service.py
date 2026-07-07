@@ -6,6 +6,8 @@ from app.utils.api_response import success_response, error_response
 class ProfileService:
     def get_profile(user_id: str):
         profile = ProfileRepository.get_profile(user_id)
+        print(profile)
+        print(user_id)
         if profile is None:
             return error_response(
                 "Profile not found"
