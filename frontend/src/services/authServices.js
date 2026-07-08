@@ -1,11 +1,11 @@
 // Includes authentication service for login, register and get current user
 
-import axios from "axios";
+import api from "./api"
 
-const API_URL = "http://localhost:8000/app/fitness/auth";
+const API_URL = "/auth";
 
 export const registerUser = async(userData) => {
-    const response = await axios.post(
+    const response = await api.post(
         `${API_URL}/register`,
         userData
     );
@@ -13,7 +13,7 @@ export const registerUser = async(userData) => {
 }
 
 export const loginUser = async(loginData) => {
-    const response = await axios.post(
+    const response = await api.post(
         `${API_URL}/login`,
         loginData
     );
@@ -21,7 +21,7 @@ export const loginUser = async(loginData) => {
 }
 
 export const getCurrentUser = async(token) => {
-    const response = await axios.get(
+    const response = await api.get(
         `${API_URL}/user`,
         {
             headers: {

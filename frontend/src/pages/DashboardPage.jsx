@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-
 import { AuthContext } from "../contexts/AuthContext";
+import PageHeader from "../components/PageHeader";
 
 function DashboardPage() {
 
@@ -16,7 +16,10 @@ function DashboardPage() {
 
     return (
         <div>
-            <h1>Dashboard</h1>
+            <PageHeader
+                title="Dashboard"
+                subtitle="Monitor your daily fitness progress."
+            />
 
             <h3>Welcome {user?.username}</h3>
 

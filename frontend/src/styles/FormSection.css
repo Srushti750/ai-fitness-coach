@@ -1,0 +1,19 @@
+.form-section {
+  background-color: white;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  border: 1px solid #dddddd;
+}
+
+.form-section h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #092241;
+}
+
+.form-section-content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
