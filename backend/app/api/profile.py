@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends
+from app.core.auth import get_current_user
 from app.schemas.profile_schema import UpdateProfileSchema
 from app.services.profile_service import ProfileService
-from app.core.auth import get_current_user
 
 router = APIRouter()
 

@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.api.dashboard import dashboard_api as dashboard_router
 from app.api.auth import router as auth_api
 from app.api.profile import router as profile_api
+from app.api.goals import router as goal_api
 
 app = FastAPI()
 
@@ -21,6 +22,12 @@ app.include_router(
     profile_api,
     prefix="/app/fitness/profile",
     tags="Profile"
+)
+
+app.include_router(
+    goal_api,
+    prefix="/app/fitness/goals",
+    tags="Goals"
 )
 
 @app.get("/")
