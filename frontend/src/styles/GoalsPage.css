@@ -1,0 +1,35 @@
+.goals-page {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.goal-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.goal-actions {
+    margin: 20px 0;
+}
+
+.goal-actions button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #0d6efd;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.goal-actions button:hover {
+    background-color: #0b5ed7;
+}
+
+.goal-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

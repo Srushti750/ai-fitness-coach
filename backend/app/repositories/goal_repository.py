@@ -9,7 +9,7 @@ class GoalRepository:
         result = db.goals.insert_one(goal_data)
         goal_data["_id"] = result.inserted_id
         print("Goal Data = " , goal_data)
-        return str(goal_data)
+        return goal_data
     
     def get_goal_by_id(goal_id: str, user_id:str):
         return db.goals.find_one(
@@ -118,6 +118,6 @@ class GoalRepository:
 
     def get_goals_options():
         return {
-            "goal_type" : GOAL_TYPES,
+            "goal_typea" : GOAL_TYPES,
             "statuses" : GOAL_STATUSES
         }

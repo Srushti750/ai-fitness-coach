@@ -1,0 +1,197 @@
+.goal-card {
+
+    background: #ffffff;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 10px;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+
+}
+
+.goal-card-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    margin-bottom: 20px;
+
+}
+
+.goal-card-header h3 {
+
+    margin: 0;
+
+}
+
+.goal-type {
+
+    margin-top: 5px;
+
+    color: #666;
+
+}
+
+.primary-badge {
+
+    margin-left: 10px;
+
+    color: orange;
+
+    font-size: 14px;
+
+}
+
+.status-badge {
+
+    color: white;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    font-size: 14px;
+
+}
+
+.goal-details {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+
+}
+
+.goal-detail-item {
+
+    flex: 1;
+
+}
+
+.goal-detail-item strong {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+}
+
+.goal-progress {
+
+    margin-bottom: 20px;
+
+}
+
+.progress-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+
+}
+
+.progress-container {
+
+    width: 100%;
+
+    height: 10px;
+
+    background: #e5e5e5;
+
+    border-radius: 5px;
+
+    overflow: hidden;
+
+}
+
+.progress-bar {
+
+    height: 100%;
+
+    background: #28a745;
+
+    transition: width 0.4s ease;
+
+}
+
+.goal-date {
+
+    margin-bottom: 15px;
+
+}
+
+.goal-notes {
+
+    margin-bottom: 20px;
+
+}
+
+.goal-notes p {
+
+    margin-top: 8px;
+
+    color: #555;
+
+}
+
+.goal-card-footer {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+}
+
+.goal-card-footer button {
+
+    padding: 8px 18px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+}
+
+.edit-btn {
+
+    background: #0d6efd;
+
+    color: white;
+
+}
+
+.edit-btn:hover {
+
+    background: #0b5ed7;
+
+}
+
+.delete-btn {
+
+    background: #dc3545;
+
+    color: white;
+
+}
+
+.delete-btn:hover {
+
+    background: #bb2d3b;
+
+}
