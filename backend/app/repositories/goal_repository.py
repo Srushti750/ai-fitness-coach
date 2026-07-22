@@ -118,6 +118,6 @@ class GoalRepository:
 
     def get_goals_options():
         return {
-            "goal_typea" : GOAL_TYPES,
+            "goal_type" : GOAL_TYPES,
             "statuses" : GOAL_STATUSES
         }
